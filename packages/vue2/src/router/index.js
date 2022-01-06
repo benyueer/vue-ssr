@@ -17,7 +17,12 @@ export default () => {
       {
         name: 'page2',
         path: '/page2',
-        components: page2
+        component: page2
+      },
+      {
+        name: 'page3',
+        path: '/page3',
+        component: () => import('../components/page3.vue')
       }
     ]
   })

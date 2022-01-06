@@ -1,3 +1,4 @@
 // require('./normal')
 // require('./useTemplate')
-require('./useVueFactory')
+// require('./useVueFactory')
+require('./finally')

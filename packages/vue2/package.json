@@ -3,18 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "build:client": "vue-cli-service build",
+    "build:server": "cross-env WEBPACK_TARGET=node vue-cli-service build --mode server",
+    "build": "npm run build:server && npm run build:client",
     "server": "nodemon ./src/server/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "cross-env": "^7.0.3",
     "express": "^4.17.2",
+    "lodash.merge": "^4.6.2",
     "nodemon": "^2.0.15",
     "vue": "^2.6.11",
     "vue-router": "^3.5.3",
-    "vue-server-renderer": "^2.6.11"
+    "vue-server-renderer": "^2.6.11",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
