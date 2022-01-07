@@ -10,7 +10,8 @@ const target = TARGET_NODE ? "server" : "client";
 
 module.exports = {
   css: {
-    extract: false
+    extract: false,
+    requireModuleExtension: true
   },
   outputDir: './dist/' + target,
   configureWebpack: () => ({

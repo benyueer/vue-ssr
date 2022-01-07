@@ -1,3 +1,5 @@
+
+import styles from './page2.module.css'
 export default {
   // render() {
   //   return (
@@ -14,12 +16,11 @@ export default {
       console.log(e)
     }
   },
-  template: `
-    <div>
-        <p>page2</p>
-        <input v-model="this.name"/>
-        <p>{this.name}</p>
-        <button @click="handleClick">btn</button>
+  render() {
+    return (
+      <div>
+        <p class={styles.red}>page2</p>
       </div>
-  `
+    )
+  }
 }
