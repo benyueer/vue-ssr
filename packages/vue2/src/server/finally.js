@@ -38,7 +38,7 @@ app.get("*", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   // eslint-disable-next-line no-console
   console.log("渲染服务器启动成功");
 });
